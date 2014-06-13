@@ -50,7 +50,7 @@ UNAME_FLAG_MEANINGS = {
     'i': 'Hardware Platform',
 }
 
-LOGOS = {'Arch Linux': '''{c1}
+LOGOS = {'Parabola GNU / Linux-libre': '''{c1}
 {c1}                         ##     ###     {results[0]}
 {c1}                    ##  ##     #####    {results[1]}
 {c1}               ##  ##  ##     #######   {results[2]}
@@ -68,7 +68,8 @@ LOGOS = {'Arch Linux': '''{c1}
 {c1}                          ###           {results[14]} 
 {c1}                         ###            {results[15]}
 {c1}                        ##              {results[16]}
-{c2}                       #                {results[17]}
+{c1}                       #                {results[17]}
+{c2}                                        {results[18]}
 \x1b[0m'''
 }
 
@@ -428,7 +429,7 @@ class distroCheck(display):
         except IOError:
             distro = self.call_command("uname -o")
         else:
-            distro = "Arch Linux"
+            distro = "Parabola GNU / Linux-libre"
         distro = '{0} {1}'.format(distro, self.call_command("uname -m"))
         return "OS", distro
 
