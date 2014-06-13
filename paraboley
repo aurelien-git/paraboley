@@ -55,8 +55,8 @@ LOGOS = {'Parabola GNU / Linux-libre': '''{1}
 {c1}                    ##  ##     #####    {results[1]}
 {c1}               ##  ##  ##     #######   {results[2]}
 {c1}            # ##  ##  ##     ########   {results[3]}
-{c1}         ### ##  ##  ##     #########   {results[4]}
-{c1}      #####         ##      #########   {results[5]}
+{c1}         ### #              #########   {results[4]}
+{c1}      ###                   #########   {results[5]}
 {c1}   ##                        ########   {results[6]}
 {c1}                             #######    {results[7]}
 {c1}                             ######     {results[8]}
@@ -68,7 +68,7 @@ LOGOS = {'Parabola GNU / Linux-libre': '''{1}
 {c1}                          ###           {results[14]} 
 {c1}                         ###            {results[15]}
 {c1}                        ##              {results[16]}
-{c1]                       #                {results[17]}
+{c1}                       #                {results[17]}
 \x1b[0m'''
 }
     
