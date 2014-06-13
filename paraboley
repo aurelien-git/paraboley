@@ -71,7 +71,6 @@ LOGOS = {'Parabola GNU / Linux-libre': '''{1}
 {c2}                       #                {results[17]}
 \x1b[0m'''
 }
-    
 
 CLASS_MAPPINGS = {}
 
@@ -429,7 +428,7 @@ class distroCheck(display):
         except IOError:
             distro = self.call_command("uname -o")
         else:
-            distro = "Parabola GNU / Linux-libre"
+            distro = "Arch Linux"
         distro = '{0} {1}'.format(distro, self.call_command("uname -m"))
         return "OS", distro
 
@@ -545,9 +544,9 @@ class systemUpgrade(display):
 
 #------------ Config    -----------
 
-class ParaboleyConfigParser(configparser.SafeConfigParser):
+class ArcheyConfigParser(configparser.SafeConfigParser):
     """
-    A parser for the Paraboley config file.
+    A parser for the archey config file.
     """
 
     defaults = {'core': {'align': 'top',
@@ -563,19 +562,19 @@ distro(), uname(n), uname(r), uptime(), wm(), de(), packages(), ram(),\
         """
         Loads the config options stored in at file_location. If file_location
         does not exist, it will attempt to load from the default config location
-        ($XDG_CONFIG_HOME/paraboley.cfg). If that does not exist, it will write a
-        default config file to $XDG_CONFIG_HOME/paraboley.cfg.
+        ($XDG_CONFIG_HOME/archey3.cfg). If that does not exist, it will write a
+        default config file to $XDG_CONFIG_HOME/archey3.cfg.
         """
 
         if file_location is None and "XDG_CONFIG_HOME" not in os.environ:
-            config_location = os.path.expanduser("~/.paraboley.cfg")
+            config_location = os.path.expanduser("~/.archey3.cfg")
         elif file_location is None:
-            config_location = os.path.expandvars("$XDG_CONFIG_HOME/paraboley.cfg")
+            config_location = os.path.expandvars("$XDG_CONFIG_HOME/archey3.cfg")
         else:
             config_location = \
                 os.path.expandvars(os.path.expanduser(file_location))
 
-        loaded = super(ParaboleyConfigParser, self).read(config_location)
+        loaded = super(ArcheyConfigParser, self).read(config_location)
 
         if file_location == None and not loaded:
             self.load_default_config()
@@ -583,7 +582,7 @@ distro(), uname(n), uname(r), uptime(), wm(), de(), packages(), ram(),\
             return [config_location]
         if not loaded:
             #Try with default
-            loaded = super(ParaboleyConfigParser, self).read()
+            loaded = super(ArcheyConfigParser, self).read()
         return loaded
 
     def load_default_config(self):
@@ -690,7 +689,7 @@ def render_class(state, cls, args):
 
 #------------ Display object ---------
 
-class Paraboley(object):
+class Archey(object):
     DISPLAY_PARSING_REGEX = "(?P<func>\w+)\((|(?P<args>[\w, /]+))\)"
 
     def __init__(self, config, options):
@@ -780,7 +779,7 @@ class Paraboley(object):
 
     def parse_display(self):
         """
-        Iterates over the display attribute of the Paraboley class, and tries to
+        Iterates over the display attribute of the Archey class, and tries to
         parse them using the DISPLAY_PARSING_REGEX.
         """
         for func in self.display.split(","):
@@ -856,11 +855,11 @@ def main():
  NOTSET, DEBUG, INFO, WARNING, ERROR, and CRITICAL. CRITICAL is the default.")
     (options, args) = parser.parse_args()
 
-    config = ParaboleyConfigParser()
+    config = ArcheyConfigParser()
     config.read(options.config)
 
-    paraboley = Paraboley(config=config, options=options)
-    paraboley.run(options.screenshot)
+    archey = Archey(config=config, options=options)
+    archey.run(options.screenshot)
 
 if __name__ == "__main__":
     main()
