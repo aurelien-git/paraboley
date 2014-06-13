@@ -51,7 +51,7 @@ UNAME_FLAG_MEANINGS = {
     'i': 'Hardware Platform',
 }
 
-LOGOS = {'Parabole GNU / Linux-libre': '''{c1}
+LOGOS = {'Parabola': '''{c1}
 {c1}                         ##     ###     {results[0]}
 {c1}                    ##  ##     #####    {results[1]}
 {c1}               ##  ##  ##     #######   {results[2]}
@@ -429,7 +429,7 @@ class distroCheck(display):
         except IOError:
             distro = self.call_command("uname -o")
         else:
-            distro = "Parabola GNU / Linux-libre"
+            distro = "Parabola"
         distro = '{0} {1}'.format(distro, self.call_command("uname -m"))
         return "OS", distro
 
