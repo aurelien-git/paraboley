@@ -429,7 +429,7 @@ class distroCheck(display):
         except IOError:
             distro = self.call_command("uname -o")
         else:
-            distro = "Parabola GNU / Linux-libre"
+            distro = "Arch Linux"
         distro = '{0} {1}'.format(distro, self.call_command("uname -m"))
         return "OS", distro
 
