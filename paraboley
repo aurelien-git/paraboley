@@ -68,7 +68,7 @@ LOGOS = {'Parabola GNU / Linux-libre': '''{1}
 {c1}                          ###           {results[14]} 
 {c1}                         ###            {results[15]}
 {c1}                        ##              {results[16]}
-{c1}                       #                {results[17]}
+{c2}                       #                {results[17]}
 \x1b[0m'''
 }
     
@@ -732,6 +732,7 @@ class Paraboley(object):
         results = self.arrange_results(results)
 
         return LOGOS[self.distro_name].format(c1=color(self.state, 1),
+                                              c2=color(self.state, 2),
                                               results = results
                                               )
 
