@@ -74,25 +74,24 @@ wmDict = {
 	'xmonad': 'xmonad'
 	}
 
-logosDict = {'Arch Linux': '''{color[1]}
-{color[1]}               +                {results[0]}
-{color[1]}               #                {results[1]}
-{color[1]}              ###               {results[2]}
-{color[1]}             #####              {results[3]}
-{color[1]}             ######             {results[4]}
-{color[1]}            ; #####;            {results[5]}
-{color[1]}           +##.#####            {results[6]}
-{color[1]}          +##########           {results[7]}
-{color[1]}         ######{color[0]}#####{color[1]}##;         {results[8]}
-{color[1]}        ###{color[0]}############{color[1]}+        {results[9]}
-{color[1]}       #{color[0]}######   #######        {results[10]}
-{color[0]}     .######;     ;###;`\".      {results[11]}
-{color[0]}    .#######;     ;#####.       {results[12]}
-{color[0]}    #########.   .########`     {results[13]}
-{color[0]}   ######'           '######    {results[14]}
-{color[0]}  ;####                 ####;   {results[15]}
-{color[0]}  ##'                     '##   {results[16]} 
-{color[0]} #'                         `#  {results[17]}
+logosDict = {'Parabola GNU / Linux-libre': '''{color[1]}
+{color[1]}                         ##     ###     {results[1]}
+{color[1]}                    ##  ##     #####    {results[2]}
+{color[1]}               ##  ##  ##     #######   {results[3]}
+{color[1]}            # ##  ##  ##     ########   {results[4]}
+{color[1]}         ### ##  ##  ##       #######   {results[5]}
+{color[1]}      ##### ##  ##  ##        #######   {results[6]}
+{color[1]}   ##          ##  ##         #######   {results[7]}
+{color[1]}                  ##         #######    {results[8]}
+{color[1]}                             ######     {results[9]}
+{color[0]}                            ######      {results[10]}
+{color[0]}                            #####       {results[11]}
+{color[0]}                           #####        {results[12]}
+{color[0]}                           ####         {results[13]}
+{color[0]}                           ###          {results[14]}
+{color[0]}                          ###           {results[15]} 
+{color[0]}                          ##            {results[16]}
+{color[0]}                         #              {reuslts[17]}
 \x1b[0m'''
 }
 
