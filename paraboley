@@ -731,7 +731,7 @@ class Paraboley(object):
         results = self.prepare_results()
         results = self.arrange_results(results)
 
-        return LOGOS[self.distro_name].format(c1=color(self.state, 1)
+        return LOGOS[self.distro_name].format(c1=color(self.state, 1),
                                               results = results
                                               )
 
