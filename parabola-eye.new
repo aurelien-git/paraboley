@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 #
+# Parabola-eye is maintain by Aurélien DESBRIÈRES <aurelien@hackers.camp>
+# it is a fork inspired from:
+#
 # Archey [version 0.3.0]
 #
 # Archey is a simple system information tool written in Python.
