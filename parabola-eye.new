@@ -44,7 +44,7 @@ output = [
 #---------------Dictionaries---------------#
 
 colorDict = {
-	'Arch Linux': ['\x1b[0;34m', '\x1b[1;34m'],
+	'Parabola GNU / Linux-libre': ['\x1b[0;34m', '\x1b[1;34m'],
 	'Ubuntu': ['\x1b[0;31m', '\x1b[1;31m', '\x1b[0;33m'],
 	'Debian': ['\x1b[0;31m', '\x1b[1;31m'],
 	'Mint': ['\x1b[0;32m', '\x1b[1;37m'],
@@ -121,7 +121,7 @@ class Output:
 		
 	def __detectDistro(self):
 		if os.path.exists('/etc/pacman.conf'):
-			return 'Arch Linux'
+			return 'Parabola GNU / Linux-libre'
 		else:
 			sys.exit(1)
 			
@@ -145,7 +145,7 @@ class Hostname:
 class Distro:
 	def __init__(self):
 		if os.path.exists('/etc/pacman.conf'):
-			distro =  'Arch Linux'
+			distro =  'Parabola GNU / Linux-libre'
 		self.key = 'Distro'
 		self.value = distro
 			
