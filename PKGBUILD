@@ -16,7 +16,7 @@ optdepends=(
 )
 conflicts=()
 provides=('paraboley')
-source="git://github.com/XL04D/paraboley.git"
+source="git://github.com/aurelien-git/paraboley.git"
 
 pkgver() {
 	cd ${pkgname}
